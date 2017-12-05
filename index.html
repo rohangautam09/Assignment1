@@ -1,95 +1,46 @@
 <!DOCTYPE html>
 <html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
-body {
-    background-color: lightblue;
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    margin-top: 20%;
 }
-h3 {
+h3{
     text-align: center;
 }
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: Black;
-   color: white;  
-}
-.header {
-   position: fixed;
-   left: 0;
-   top: 0;
-   width: 100%;
-   background-color: Black;
-   color: white;
+.form-inline{
+    margin-left: 17%;
 }
 </style>
+</head>
+
 <body>
-<div class="header">
+
+<div class="center">
 <h3> Number of occurrences of substring in given string.</h3>
+<br><br>
+<form class="form-inline">
+  <div class="form-group">
+    <input type="text" class="form-control" id="myText1" placeholder="String">
+  </div>
+ <div class="form-group">
+    <input type="text" class="form-control" id="myText2" placeholder="SubString">
+  </div>
+  <button onclick="myFunction4()" type="button" class="btn btn-success">Output</button>
+  <br><br>
+</form>
 </div>
-
-
-<h4>Input:</h4>
-<p>damn(Substring)</p>
-<p>goddamnn (String)</p>
-<button onclick="myFunction1()">Output</button>
-<alert id="demo1"></alert>
-
-
-
-<h4>Input:</h4>
-<p>kl(Substring)</p>
-<p>cling (String)</p>
-<button onclick="myFunction2()">Output</button>
-<alert id="demo2"></alert>
-
-
-
-<h4>Input:</h4>
-<p>yan(Substring)</p>
-<p>nayaninayan (String)</p>
-<button onclick="myFunction3()">Output</button>
-<alert id="demo3"></alert>
-
-
-
-<h4>Input:</h4>
-<p>zzz(Substring)</p>
-<p>zzzzzz (String)</p>
-<button onclick="myFunction4()">Output</button>
-<alert id="demo4"></alert>
-
-
 
 <script>
-function myFunction1() {
-    var str = "goddamnn"; 
-    var res = (str.match(/damn/g)|| [] ).length;
-    alert(document.getElementById("demo1").innerHTML = res);
-}
-
-function myFunction2() {
-    var str = "cling"; 
-    var res = (str.match(/kl/g)|| [] ).length;
-    alert(document.getElementById("demo2").innerHTML = res);
-}
-
-function myFunction3() {
-    var str = " nayaninayan"; 
-    var res = (str.match(/yan/g)|| [] ).length;
-    alert(document.getElementById("demo3").innerHTML = res);
-}
-
-function myFunction4() {
-    var str = " zzzzzz"; 
-    var res = (str.match(/zzz/g)|| [] ).length;
-    alert(document.getElementById("demo4").innerHTML = res);
-};
+function myFunction4(){
+    var x=document.getElementById("myText1").value;
+    var y=document.getElementById("myText2").value;
+    alert( (x.split(y).length)-1);}
 </script>
-<div class="footer">
-  <p>Created By Rohan Gautam</p>
-</div>
 </body>
 </html>
-
